@@ -19,10 +19,10 @@ public class AdivinApp extends Application  {
 	private Button checkButton;
 	private TextField numeroText;
 	private int intentos = 0;
-	private int numeroGenerado = (int)(Math.random()*100);
+	private int numeroGenerado = (int)(Math.random()*100)+1;
 	public void start(Stage primaryStage) throws Exception {
 		numeroText = new TextField();
-		numeroText.setPromptText("0 a 100");
+		numeroText.setPromptText("1 a 100");
 		numeroText.setMaxWidth(150);
 		
 		checkButton = new Button("Comprobar");
@@ -72,8 +72,10 @@ public class AdivinApp extends Application  {
 				casi.showAndWait();
 
 			}else {
-				victoria.setContentText("Solo has necesitado"+intentos+" intentos\n\nVuelve a jugar y Hazlo mejor");
+				victoria.setContentText("Solo has necesitado "+intentos+" intentos\n\nVuelve a jugar y Hazlo mejor");
 				victoria.showAndWait();
+				intentos = 0;
+				numeroGenerado = (int)(Math.random()*100)+1;
 			}
 		} catch (NumberFormatException e1) {
 			error.showAndWait();
