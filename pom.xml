@@ -8,7 +8,7 @@
   <properties>
   	<maven.compiler.target>11</maven.compiler.target>
 	<maven.compiler.source>11</maven.compiler.source>
-	<exec.MainClass>dad.javafx.Main</exec.MainClass>
+	<exec.mainClass>dad.javafx.Main</exec.mainClass>
   </properties>
   <dependencies>
   	<dependency>
